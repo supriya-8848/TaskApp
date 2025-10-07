@@ -5,7 +5,7 @@ frappe.ui.form.on('Po So Link list', {
         if (frm.doc.purchase_order) {
             frm.set_query("sales_order", function() {
                 return {
-                    query: "tapp.api.get_sales_orders_from_po",
+                    query: "tapp.tapp.doctype.po_so_link_list.api.get_sales_orders_from_po",
                     filters: {
                         purchase_order: frm.doc.purchase_order
                     }
@@ -22,7 +22,7 @@ frappe.ui.form.on('Po So Link list', {
 
         // Fetch child items from the selected SO
         frappe.call({
-            method: "tapp.api.get_so_items",
+            method: "tapp.tapp.doctype.po_so_link_list.api.get_so_items",
             args: {
                 sales_order: frm.doc.sales_order
             },

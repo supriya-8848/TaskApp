@@ -1,7 +1,7 @@
 import frappe
+from frappe import _
 
 #Query to fetch Sales Orders based on the selected Purchase Order
-@frappe.whitelist()
 def get_sales_orders_from_po(doctype,txt,searchfield,start,page_len,filters):
     purchase_order = filters.get("purchase_order")
 
@@ -16,7 +16,7 @@ def get_sales_orders_from_po(doctype,txt,searchfield,start,page_len,filters):
     LIMIT %s OFFSET %s
     """, (purchase_order, page_len, start))
 
-@frappe.whitelist()
+#fetch the sales order child table into po so file.
 def get_so_items(sales_order=None):
     if not sales_order:
         frappe.msgprint("No Sales Order provided.")
