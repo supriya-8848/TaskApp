@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-10-15 12:25:46.581378",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-10-15 12:40:59.604541",
+ "modified_by": "Administrator",
+ "module": "Tapp",
+ "name": "CTE - Employee above Avg Salary",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "WITH dept_avg_salary AS(\n    SELECT\n        department,\n        AVG(salary) AS avg_salary\n    FROM\n        `tabEmployee Details`\n    GROUP BY \n        department\n)\n\nSELECT\n    e.emp_name AS \"ID:Link/EMployee Details:100\",\n    e.phone_no AS \"Phone:Data:120\",\n    e.age AS \"Age:Int:80\",\n    e.department AS \"Department:Data:120\",\n    e.salary AS \"Salary:Currency:100\",\n    d.avg_salary AS \"Dept Avg Salary:Currency:140\"\nFROM\n    `tabEmployee Details` e\nJOIN\n    dept_avg_salary d ON e.department = d.department\nWHERE\n    e.salary > d.avg_salary\nORDER BY\n    e.salary DESC\n    ",
+ "ref_doctype": "Employee Details",
+ "report_name": "CTE - Employee above Avg Salary",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
