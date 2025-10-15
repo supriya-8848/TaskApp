@@ -1,0 +1,4 @@
+.greyed-out {
+    color: #ccc !important;
+    pointer-events: none;
+}

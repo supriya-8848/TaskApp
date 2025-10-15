@@ -7,6 +7,7 @@
  "field_order": [
   "purchase_order",
   "sales_order",
+  "fetch_items",
   "po_so_items"
  ],
  "fields": [
@@ -27,12 +28,17 @@
    "fieldtype": "Table",
    "label": "Items",
    "options": "Po So Link Items List"
+  },
+  {
+   "fieldname": "fetch_items",
+   "fieldtype": "Button",
+   "label": "fetch"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-07 15:31:33.063178",
+ "modified": "2025-10-10 11:09:25.398427",
  "modified_by": "Administrator",
  "module": "Tapp",
  "name": "Po So Link list",

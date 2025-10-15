@@ -5,6 +5,7 @@ app_description = "task for all app"
 app_email = "supriyar@gmail.com"
 app_license = "mit"
 
+
 # Apps
 # ------------------
 
@@ -25,7 +26,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/tapp/css/tapp.css"
+# app_include_css = "/assets/tapp/css/custom.css"
 # app_include_js = "/assets/tapp/js/tapp.js"
 
 # include js, css files in header of web template
