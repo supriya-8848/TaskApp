@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 11:57:51.451742",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "po_details",
+  "packing_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "po_details",
+   "fieldtype": "Table",
+   "label": "PO Details",
+   "options": "PO Details"
+  },
+  {
+   "fieldname": "packing_details",
+   "fieldtype": "Table",
+   "label": "Packing Details",
+   "options": "Packing Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-22 11:59:13.316879",
+ "modified_by": "Administrator",
+ "module": "Tapp",
+ "name": "ASN",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
